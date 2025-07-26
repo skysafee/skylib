@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Cloud PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4A90E2"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PDF Cloud Reader</h1>
+        <div class="upload-container">
+            <input type="file" id="pdf-upload" accept="application/pdf" hidden/>
+            <button id="upload-button">Upload PDF</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="pdf-list-container">
+            <h2>Your PDFs</h2>
+            <ul id="pdf-list">
+                <!-- PDF items will be injected here by JavaScript -->
+            </ul>
+            <div id="loader" class="loader"></div>
+        </div>
+    </main>
+
+    <div id="pdf-viewer-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-button">×</span>
+                <h2 id="pdf-viewer-title">PDF Viewer</h2>
+            </div>
+            <div class="modal-body">
+                <div id="viewer-controls">
+                    <button id="prev-page">Previous</button>
+                    <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+                    <button id="next-page">Next</button>
+                </div>
+                <div id="canvas-container">
+                    <canvas id="pdf-canvas"></canvas>
+                </div>
+                 <div id="viewer-loader" class="loader"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="update-notification" class="notification">
+        A new version is available. <a href="#" id="reload-page">Reload</a>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
