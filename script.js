@@ -1,6 +1,6 @@
 // Frontend JavaScript (script.js)
 document.addEventListener('DOMContentLoaded', () => {
-    const API_URL = 'https://script.google.com/macros/s/AKfycbwaLN5wlGAOMCgA1yG0cOsEZJ0LH0qrDDWmm3s8xYdkCER8-WNWm627H0UG72FLHFSgSw/exec';
+    const API_URL = 'https://script.google.com/macros/s/AKfycby_rGJnO67MmQJ1ddrpehA4vWNJ2ZJ1f9vGSEkYAMbPtCTUkgJNT8SPzepO0bsOks4Kxg/exec';
     const SECRET_TOKEN = 'thisuserislegit06as';
 
     const uploadButton = document.getElementById('upload-button');
